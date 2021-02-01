@@ -1,0 +1,96 @@
+def fibo(num):
+    out,a,b = 0,1,1
+    o=[]
+    while out <=num:
+        out=a+b
+        #print(out)
+        a=b
+        #print(a)
+        b=out
+        #print(b)
+        o.append(out)
+        #print('loop')
+    return o    
+       
+def prime(num):
+    o =[]
+    i = 2
+    while i < num:
+        if num % i == 0:
+            print ('not prime')
+            break
+        i+=1
+    else:
+        print('prime')
+     
+
+    return(0)
+   
+def last2(str):
+  last2 = str[-2:]
+  cnt=0
+  for i in range(len(str)):
+      print(last2 +'--'+ str[i:i+2])
+      if last2 == str[i:i+2]:
+          cnt += 1
+  return cnt-1
+
+def sum13(nums):
+  cnt = 0
+  skip = 0
+  for i in nums:
+
+   if skip == 1:
+        skip=0
+        continue
+   
+   if i == 13:
+        skip = 1
+        continue
+     
+   else:
+      cnt+= i
+
+  return cnt  
+ 
+def sum67(nums):
+  skip = False
+  cnt = 0
+  for i in nums:
+    print("i:"+str(i))
+    if i == 7:
+      skip = False
+      print('7' + str(skip))
+      continue
+    elif skip == True:
+      print('skip:'+str(skip))
+      continue
+     
+    if i ==6 :
+      skip = True
+      print('6' + str(skip))
+      continue
+    else:
+      cnt+=i
+      print(cnt)
+  return cnt  
+
+def has22(nums):
+  i=0
+  while i < (len(nums)-1) :
+    if nums[i]==nums[i+1]==2:
+      return True
+    i+=1  
+  else :
+    return False
+     
+   
+#print(has22([1, 1, 2]))    
+#print(sum67([1, 1, 6, 7, 2]))
+#print(sum13([13, 1, 2, 13, 2, 1, 13]))  
+#print(last2('xaxaxaxx'))
+#print(fibo(5))        
+#print(prime(7))
+
+l= [1,2,1,2,None]
+print(l)
