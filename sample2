@@ -1,0 +1,31 @@
+# Escaping Single Quote  
+String1 = "I\m a \Geek\\"
+print("\nEscaping Single Quote: ")
+print(String1)
+
+# Python Program for
+# Formatting of Strings
+ 
+# Default order
+t = ['Geeks', 'For', 'Life']
+print (t)
+String1 = '{} rohit {} {}'.format(*t)
+print("Print String in default order: ")
+print(String1)
+
+# To demonstrate aligning of spaces  
+String1 = "\n{0:^16} was founded in {2:<4}!".format("GeeksforGeeks", 2009, 2020)
+print(String1)
+
+dict = {1:{'name':'Rohit','age' : 37, 'loc' : 'Baltimore'},
+        2:{'name':'Sonali','age' : 33, 'loc' : 'Baltimore'},
+        3:{'name':'Jovan','age' : 1, 'loc' : 'Baltimore'} }
+       
+print('-'*49)
+print('|{:^15}|{:^15}|{:^15}|'.format(*list(map(str,dict[1].keys()))))
+print('-'*49)
+       
+for i in dict.values():
+    print('|{:^15}|{:^15}|{:^15}|'.format(*list(map(str,i.values()))))
+
+print('-'*49)
