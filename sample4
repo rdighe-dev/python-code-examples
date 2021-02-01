@@ -1,0 +1,21 @@
+def valid_ip(ip):
+    l=ip.split('.')
+    
+    print(l)
+    if len(l) > 4:
+        return False
+    else:
+        for i in l:
+            if (i.isnumeric() == False or len(i) >3):
+                return False
+    return True
+
+if __name__ == "__main__":
+    print(valid_ip("192.168.23.0"))
+    
+    
+lt = [(0,10),(10,25)]
+s = set()
+for i in lt:
+    s=s.difference(set(range(i[0],i[1]+1)).difference(s))
+    print(s)
