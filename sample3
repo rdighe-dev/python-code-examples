@@ -1,0 +1,84 @@
+def sort_elem(n):
+    return n[m]
+   
+def sort(a,m):
+    print(sorted(a,key = sort_elem ))
+    print(a)
+
+if __name__ == "__main__":
+    a = [(23, 45, 20), (25, 44, 39), (89, 40, 23)]
+    m = 2
+    print("Sorted:"),
+    sort(a,m)
+
+
+def foo():
+    x = 20
+
+    def bar():
+        global x
+        x = 25
+   
+    print("Before calling bar: ", x)
+    print("Calling bar now")
+    bar()
+    print("After calling bar: ", x)
+
+foo()
+print("x in main: ", x)
+
+
+l=['a','b','c','d','e','f','g']
+n=len(l)-1
+for i in range(0,len(l)):
+    print(l[i])
+    #l[0]=l.pop(i)
+print(l)
+
+
+def monotonic(l):
+    if l == sorted(l) or l == sorted(l,reverse=True):
+        return True
+    else:
+        return False
+   
+def mx(l):
+    m=0
+    for i in l:
+        if m <= i:
+            m=i
+    return m        
+   
+def mindiff(l):
+   
+    a=[abs(x-y) for x in l for y in l  if x-y !=0]
+    return min(a)
+
+def factorial(m,n):
+    if n == 1:
+        return m
+    else:
+        return factorial( m*n, n-1)
+       
+def calcback(num):
+    if num <=0:
+        print ('*')
+    else:
+        print ('*'*num)
+        calcback(num-2)
+
+def power(p,num):
+    if num == 1:
+        return p
+    else:
+       
+        return(p*power(p,num-1))    
+   
+if __name__ =='__main__':
+    l = [10, 2, 5, 15]
+    #print(monotonic(l))
+    #print(mx(l))
+    #print(mindiff(l))
+    print(factorial(1,5))
+    print(calcback(15))
+    print(power(2,3))
