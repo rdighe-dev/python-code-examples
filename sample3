@@ -1,3 +1,6 @@
+-----------------------------------------------------
+sorting with user defined function
+-----------------------------------------------------
 def sort_elem(n):
     return n[m]
    
@@ -11,7 +14,9 @@ if __name__ == "__main__":
     print("Sorted:"),
     sort(a,m)
 
-
+-----------------------------------------------------
+GLobal variable example
+-----------------------------------------------------
 def foo():
     x = 20
 
@@ -27,7 +32,9 @@ def foo():
 foo()
 print("x in main: ", x)
 
-
+-----------------------------------------------------
+reverse list wihtout using list.reverse
+-----------------------------------------------------
 l=['a','b','c','d','e','f','g']
 n=len(l)-1
 for i in range(0,len(l)):
@@ -35,45 +42,59 @@ for i in range(0,len(l)):
     #l[0]=l.pop(i)
 print(l)
 
-
+-----------------------------------------------------
+check if list is monotonic
+-----------------------------------------------------
 def monotonic(l):
     if l == sorted(l) or l == sorted(l,reverse=True):
         return True
     else:
         return False
-   
+-----------------------------------------------------
+max of list without using max function
+-----------------------------------------------------
 def mx(l):
     m=0
     for i in l:
         if m <= i:
             m=i
     return m        
-   
+-----------------------------------------------------
+minimum difference between list of items
+-----------------------------------------------------   
 def mindiff(l):
    
     a=[abs(x-y) for x in l for y in l  if x-y !=0]
     return min(a)
-
+-----------------------------------------------------
+Factorial
+-----------------------------------------------------
 def factorial(m,n):
     if n == 1:
         return m
     else:
         return factorial( m*n, n-1)
-       
+-----------------------------------------------------
+recursion example
+-----------------------------------------------------       
 def calcback(num):
     if num <=0:
         print ('*')
     else:
         print ('*'*num)
         calcback(num-2)
-
+-----------------------------------------------------
+Power funciton (m raised to n) (m^n)
+-----------------------------------------------------
 def power(p,num):
     if num == 1:
         return p
     else:
        
         return(p*power(p,num-1))    
-   
+-----------------------------------------------------
+porgram driver
+-----------------------------------------------------   
 if __name__ =='__main__':
     l = [10, 2, 5, 15]
     #print(monotonic(l))
