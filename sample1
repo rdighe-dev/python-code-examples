@@ -31,6 +31,19 @@ def prime(num):
 
     return(0)
 --------------------------------------------------------------
+Return the "centered" average of an array of ints, which we'll say is the mean average of the values, except ignoring the largest and smallest values in the array. If there are multiple copies of the smallest value, ignore just one copy, and likewise for the largest value. Use int division to produce the final average. You may assume that the array is length 3 or more.
+
+
+centered_average([1, 2, 3, 4, 100]) → 3
+centered_average([1, 1, 5, 5, 10, 8, 7]) → 5
+centered_average([-10, -4, -2, -4, -2, 0]) → -3
+-------------------------------------------------------------
+def centered_average(nums):
+  nums.remove(max(nums))
+  nums.remove(min(nums))
+  return sum(nums)/len(nums)
+  
+--------------------------------------------------------------
 Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
 
 last2('hixxhi') → 1
@@ -118,7 +131,21 @@ def has22(nums):
     i+=1  
   else :
     return False
-     
+--------------------------------------------------------------
+
+Given two strings, return True if either of the strings appears at the very end of the other string, ignoring upper/lower case differences (in other words, the computation should not be "case sensitive"). Note: s.lower() returns the lowercase version of a string.
+
+
+end_other('Hiabc', 'abc') → True
+end_other('AbC', 'HiaBc') → True
+end_other('abc', 'abXabc') → True
+-----------------------------------------------------------------
+def end_other(a, b):
+  
+  if a.lower().endswith(b.lower()) or b.lower().endswith(a.lower()):
+    return True
+  else:
+    return False
 --------------------------------------------------------------
 Drivers
 --------------------------------------------------------------     
